@@ -3,8 +3,8 @@
     <input type="file" @change="importFile(this)" id="imFile" style="display: none"
            accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel"/>
     <a id="downlink"></a>
-    <el-button @click="uploadFile()">导入</el-button>
-    <el-button @click="downloadFile(excelData)">导出</el-button>
+    <el-button class="button" @click="uploadFile()">导入</el-button>
+    <el-button class="button" @click="downloadFile(excelData)">导出</el-button>
     <!--错误信息提示-->
     <el-dialog title="提示" v-model="errorDialog" size="tiny">
       <span>{{errorMsg}}</span>
@@ -216,6 +216,11 @@
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-
+<style>
+  .el-table th>.cell {
+    text-align: center;
+  }
+  .button {
+    margin-bottom: 20px;
+  }
 </style>
