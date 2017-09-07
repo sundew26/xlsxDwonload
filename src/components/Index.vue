@@ -135,7 +135,7 @@
         for (let k in json[0]) {
           keyMap.push(k)
         }
-        console.info('keyMap', keyMap)
+        console.info('keyMap', keyMap, json)
         let tmpdata = [] // 用来保存转换好的json
         json.map((v, i) => keyMap.map((k, j) => Object.assign({}, {
           v: v[k],
